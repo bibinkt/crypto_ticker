@@ -4,13 +4,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by bthiru on 1/21/2018.
  */
-@RedisHash("products")
-public class PairInfo {
+public class PairInfo implements Serializable {
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
     @Id
     String id;

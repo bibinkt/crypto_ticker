@@ -23,8 +23,10 @@ public class SosController {
 
         System.out.print("Hi reached ,myserver");
         //PairInfo pairInfo = sosRepository.findOne(noteId);
-        PairInfo pairInfo = cryptoService.activateCoinPair();
-
-        return ResponseEntity.ok().body(pairInfo);
+       // PairInfo pairInfo = cryptoService.activateCoinPair();
+       // cryptoService.updateCoinPairInfo();
+        cryptoService.getTickerUpdate();
+       // System.out.print("Bibin got out put -->"+cryptoService.getValue("1").getActivePairId().size());
+        return ResponseEntity.ok().body(new PairInfo());
     }
 }

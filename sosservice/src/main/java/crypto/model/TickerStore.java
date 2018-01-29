@@ -1,11 +1,19 @@
 package crypto.model;
 
+import org.springframework.data.annotation.Id;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * Created by bthiru on 1/21/2018.
  */
-public class TickerStore {
+public class TickerStore implements Serializable {
+
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
     BigDecimal curentVol;
     BigDecimal recentTrxRate;
@@ -14,6 +22,8 @@ public class TickerStore {
     Long lastUpdated;
     String primaryCoin;
     String pairCoin;
+
+    @Id
     String pairId;
 
     public BigDecimal getCurentVol() {
