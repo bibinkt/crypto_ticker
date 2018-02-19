@@ -46,4 +46,14 @@ public class PairInfo implements Serializable {
 
     List<String> activePairId;
     List<String> inActivePairId;
+    int readEntry =0;
+
+    public int getReadEntry() {
+        return readEntry;
+    }
+
+    public void setReadEntry(int readEntry) {
+        this.readEntry = readEntry;
+    }
+
 }
